@@ -9,7 +9,7 @@ router.get('/', (req, res) => res.send('Hello World'))
 
 router.post('/signup', async (req, res) => {
     const { email, password, username, userlastname } = req.body;
-    const newUser = new User({ email: email, password: password, username: username, userlastname: userlastname });
+    const newUser = new User({ email: email, password: password, username: username, userlastname: userlastname, rol: rol});
     await newUser.save();
     const token = jwt.sign({_id: newUser._id }, 'secretkey')
     res.status(200).json({token})
