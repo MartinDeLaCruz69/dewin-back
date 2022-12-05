@@ -6,6 +6,9 @@ require('./database');
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/usuarios', require('./routes/usuario'));
+app.use('/api/actividades', require('./routes/actividad'));
+
 
 app.use('/api', require('./routes/index'))
 
