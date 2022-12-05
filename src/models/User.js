@@ -9,7 +9,7 @@ const userSchema = new Schema({
     direccion: String,
 },
 {
-    timestamps: true
+    timestamps: true 
 })
 
 module.exports = model('User', userSchema);
